@@ -319,3 +319,46 @@ button:hover {
     touch-action: manipulation;
   }
 }
+
+/* Touch controls for phones */
+.touch-controls {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 4px;
+}
+
+.move-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.touch-btn {
+  min-width: 56px;
+  min-height: 52px;
+  padding: 8px;
+  border: 1px solid #35e8ff;
+  border-radius: 12px;
+  background: #101d38;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.shoot-btn {
+  min-width: 76px;
+  min-height: 62px;
+  background: #6724a8;
+  border-color: #c28aff;
+}
+
+@media (max-width: 700px) {
+  .touch-controls {
+    display: flex;
+  }
+}
