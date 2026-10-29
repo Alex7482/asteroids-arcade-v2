@@ -902,6 +902,39 @@ window.addEventListener("keyup", event => {
   keys[event.key] = false;
 });
 
+
+// Mobile touch controls
+function connectTouchButton(buttonId, keyName) {
+  const button = document.getElementById(buttonId);
+  if (!button) return;
+
+  button.addEventListener("pointerdown", event => {
+    event.preventDefault();
+    keys[keyName] = true;
+
+    if (button.setPointerCapture) {
+      button.setPointerCapture(event.pointerId);
+    }
+  });
+
+  const releaseKey = event => {
+    event.preventDefault();
+    keys[keyName] = false;
+  };
+
+  button.addEventListener("pointerup", releaseKey);
+  button.addEventListener("pointercancel", releaseKey);
+  button.addEventListener("lostpointercapture", () => {
+    keys[keyName] = false;
+  });
+}
+
+connectTouchButton("touchLeft", "ArrowLeft");
+connectTouchButton("touchForward", "ArrowUp");
+connectTouchButton("touchRight", "ArrowRight");
+connectTouchButton("touchShoot", " ");
+
+
 resetGame();
 showOverlay(
   "EARTH SAVIOR",
