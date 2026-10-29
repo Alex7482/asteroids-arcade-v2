@@ -87,3 +87,47 @@ Build a futuristic planetary asteroid survival game using HTML, CSS, and JavaScr
 6. Implement score, lives, and upgrades.
 7. Add 500 rounds and progressive difficulty.
 8. Test and publish with GitHub Pages.
+
+## V2.1 - Bosses, Gold, Shop, and Difficulty
+
+### Boss Battles
+- Add boss enemies with visible health bars.
+- Bosses require many hits to defeat.
+- Bosses become harder as the player progresses.
+- Bosses use attacks that the player must dodge.
+
+### Stronger Asteroids
+- Small asteroids require 2-3 hits.
+- Medium asteroids require 4-6 hits.
+- Large asteroids require 8 or more hits.
+- Asteroids show damage through visual changes.
+- Rare golden asteroids drop gold when destroyed.
+
+### Gold System
+- Gold is a currency separate from score.
+- Destroying golden asteroids rewards gold.
+- Display the player's gold balance on the HUD.
+- Gold stays available to spend throughout the game.
+
+### Upgrade Shop
+- Open the shop every 5,000 points.
+- Pause gameplay while the shop is open.
+- Allow players to spend gold on upgrades and items.
+- Include weapons, shields, extra lives, and damage upgrades.
+- Show item prices and prevent purchases the player cannot afford.
+
+### Helper Ships
+- Allow players to buy companion ships with gold.
+- Helper ships follow the player and automatically shoot asteroids.
+- Additional helper ships can be purchased at higher prices.
+
+### Increased Difficulty
+- Increase asteroid count and speed over time.
+- Increase asteroid health in later rounds.
+- Make boss battles progressively harder.
+- Keep the game challenging through the 500-round goal.
+
+### Compatibility
+- Keep existing movement, shooting, score, lives, and pause controls.
+- Support keyboard controls and the existing game layout.
+- Test every new feature before considering the update complete.
